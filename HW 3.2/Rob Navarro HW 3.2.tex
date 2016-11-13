@@ -1,0 +1,91 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 3.2}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent
+2. Suppose that A is the set of sophomores at your school and B is the set of students in discrete mathematics at your school. Express each of these sets in terms of A and B.\\\\
+a) The set of sophomores taking discrete mathematics in your school.\\
+$A\cap B$\\\\
+b) The set of sophomores at your school who are not taking discrete mathematics.\\
+$A - B$\\\\
+c) The set of students at your school who either are sophomores or are taking discrete mathematics.\\
+$A\cup B$\\\\
+d) The set of students at your school who either are not sophomores or are not taking discrete mathematics.\\
+$\overline{\rm A}\cup\overline{\rm B}$\\\\
+4. Let $A = \{a, b, c, d, e\}$ and $B = \{a, b, c, d, e, f, g, h\}$. Find: \\\\
+a) $A\cup B$\\
+$\{a, b, c, d, e, f, g, h\}$\\\\
+b) $A\cap B$\\
+$\{a, b, c, d, e\}$\\\\
+c) $A - B$\\
+\{\}\\\\
+d) $B - A$\\
+\{f, g, h\}\\\\
+12. Prove the first absorption law from Table 1 by showing that if A and B are sets, then $A\cup(A\cap B) = A$.\\\
+In order to prove this we must prove that $x\in A\cup(A\cap B)$ and $x\in A$.  We know that $x\in A$ and $x\in B$ based on the definition of a union. Either way we know that if $x\in A\cup(A\cap B)$ then $x\in A$. We can conclude $A\cup(A\cap B)\subseteq A$ and $A\subseteq A\cup(A\cap B)$. This completes the proof.\\\\
+16. Let A and B be sets. Show that:\\\\
+a) $(A\cap B)\subseteq A$\\
+Let $x\in(A\cup B)$, then $x\in A$ and $x\in B$ by the definition of intersection. Based on this information we can conclude that $(A\cap B)\subseteq A$.\\\\
+b) $A\subseteq (A\cup B)$\\
+Let $x\in A$ then by the definition of a union $x\in(A\cup B)$\\\\
+c) $A - B\subseteq A$\\
+Let $x\in A - B$, then by the definition of difference we know that $x\in A$ and $x\notin B$. This proves that $A - B\subseteq A$.\\\\
+d) $A\cap(B - A) = \varnothing$\\
+Using proof by contradiction, there exists an $x\in A\cap(B - A)$. We know that $x\in A$ and $x\in(B - A)$, but by definition of difference we also have $x\notin A$. This leads to a contradiction that $x\in A$ and $x\notin A$. This means that the assumption was false and we proved that $A\cup (B - A) = \varnothing$.\\\\ 
+e) $A\cup(B - A) = A\cup B$\\
+ \begin{tabular} {| l | c | c | c | c | }
+  \hline
+  A & B & $B - A$ & $A\cup(B - A)$ & $A\cup B$ \\ \hline
+  1 & 1 & 0 & 1 & 1 \\ \hline
+  1 & 0 & 0 & 1 & 1 \\ \hline
+  0 & 1 & 1 & 1 & 1  \\ \hline
+  0 & 0 & 0 & 0 & 0  \\ \hline
+\end{tabular}\\\\\\
+18. Let A, B, and C be sets, show that: \\\\
+a) $(A\cup B)\subseteq(A\cup B\cup C)$\\
+Let $x\in (A\cup B)$, then by the definition of a union $x\in A$ or $x\in B$. Then by the definition of union we can also conclude that $x\in(A\cup B\cup C)$. Thus, we can conclude that that $(A\cup B)\subseteq(A\cup B\cup C)$.\\\\
+b) $(A\cap B\cap C)\subseteq (A\cap B)$\\
+By the definition of intersection we know that $x\in A, x\in B$, and $x\in C$. We also know by the definition of intersection that $x\in (A\cap B)$. Thus, we can conclude that $(A\cap B\cap C)\subseteq (A\cap B)$\\\\
+c) $(A - B) - C\subseteq A - C$\\
+Let $x\in(A - B) - C$, then by the definition of difference we know that $x\in A, x\notin B$ and $x\notin C$. Then by the definition of difference we know that $x\in A - C$. Thus, we can conclude that $(A - B) - C\subseteq A - C$.\\\\
+d) $(A - C)\cap (C - B) = \varnothing$\\
+Using proof by contradiction, there exists an $x\in(A - C)\cap (C - B)$. By the definition of intersection we then know that $x\in(A - C)$ and $x\in(C - B)$. Then by the definition of difference we know that $x\in A, x\notin C, x\in C,$ and $x\notin B$. This creates a contradiction with $x\in C$ and $x\notin C$. This means that the assumption was false and we proved that $(A - C)\cap (C - B) = \varnothing$.\\\\ 
+e)$(B - A)\cup (C - A) = (B\cup C) - A$\\
+\begin{tabular} {| l | c | c | c | c | c | c || c |}
+  \hline
+  A & B & C & $C - A$ & $B - A$ & $B\cup C$ & $(C - A)\cup(B - A)$ & $(B\cup C) - A$ \\ \hline
+  1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\ \hline
+  1 & 1 & 0 & 0 & 0 & 1 & 0 & 0\\ \hline
+  1 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\ \hline
+  1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ \hline
+  0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+  0 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\ \hline
+  0 & 0 & 1 & 1 & 0 & 1 & 1 & 1 \\ \hline
+  0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\ \hline
+\end{tabular}\\\\\\
+20. Show that if A and B are sets, then $(A\cap B)\cup(A\cap\overline{\rm B}) = A$\\
+ \begin{tabular} {| l | c | c | c | c | c |}
+  \hline
+  A & B & $A\cap B$ & $\overline{\rm B}$ & $(A\cap\overline{\rm B})$ & $(A\cap B)\cup(A\cap\overline{\rm B})$\\ \hline
+  1 & 1 & 1 & 0 & 0 & 1\\ \hline
+  1 & 0 & 0 & 1 & 1 & 1\\ \hline
+  0 & 1 & 0 & 0 & 0 & 0\\ \hline
+  0 & 0 & 0 & 1 & 0 & 0\\ \hline
+\end{tabular}\\\\\\
+
+
+\end{document}  

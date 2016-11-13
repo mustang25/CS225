@@ -1,0 +1,36 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{Quiz 3}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\noindent
+1. Use proof by contraposition to prove the following statement - \\
+Suppose $a,b\in Z$. If $a^2(b^2 - 2b)$ is odd, then a and b are odd.\\\\
+Let: p = If $a^2(b^2 - 2^b)$ is odd; q = then a and b are odd\\
+$p\to q$; contraposition: $\neg q\to\neg p$
+This states that if a or b is even, then $a^2(b^2 - 2b)$ is even. \\
+If a is positive number then let: $a = 2k$:\\
+$(2k)^2(b^2 - 2b) = 4k^2(b^2 - 2b) = 4k^2b^2 - 8k^2b = 2(2k^2b^2 - 4k^2b)$\\
+This proves that if a is a positive number then $a^2(b^2 - 2b)$ is even.\\
+If b is a positive number then let $b = 2k$:\\
+$a^2(2k^2 - 2^{2k}) = 2(a^2k^2 - a^2)$
+This proves that if b is a positive number then $a^2(b^2 - 2b)$ is even.\\
+From these results we can conclude that if $a^2(b^2 - 2b)$ is odd, then a and b are odd by contraposition.\\\\
+2. Use proof by contradiction to show that If a and b are rational numbers with $b\neq 0$ and $x$ is an irrational number, then $a + bx$ is irrational.\\\\
+For proof by contradiction let $a + bx$ be a rational number.\\
+Let: $a + bx =\frac{c}{d}$, $a =\frac{p}{q}$ and $b =\frac{s}{t}$. Where $d$, $q$ and $t\neq 0$\\
+Then: $x = (\frac{c}{d} -\frac{p}{q}) *\frac{t}{s} = \frac{cqt - dpt}{dqs}$
+Thus, $x$ is a rational number, which is a contradiction. Therefore, $a + bx$ is irrational.\\
+\end{document}  

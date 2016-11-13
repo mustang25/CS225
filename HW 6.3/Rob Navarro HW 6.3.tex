@@ -1,0 +1,49 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 6.3}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent
+6. Find the value of each of these quantities. \\\\
+a) $C(5,1) = \frac{5!}{1! * 4!} = 5$\\
+b) $C(5,3) = \frac{5!}{3! * 2!} = 10$\\ 
+c) $C(8,4) = \frac{8!}{4! * 4!} = 70$\\ 
+d) $C(8,8) = \frac{8!}{8! * 0!} = 1$\\ 
+e) $C(8,0) = \frac{8!}{0! * 8!} = 1$\\
+f) $C(12,6) = \frac{12!}{6! * 6!} = 924$\\\\
+10. There are six different candidates for governor of a state. In how many different orders can the names of the candidates be printed on a ballot?\\\\
+$P(6,6) = 6! =  720$\\\\
+12. How many bit strings of length 12 contain\\\\
+a) exactly three 1s?\\
+$C(12,3) = \frac{12!}{3! * 9!} = 220$\\b) at most three 1s?\\
+$C(12,3) + C(12,2) + C(12,1) + C(12,0) = \frac{12!}{3! * 9!} + \frac{12!}{2! * 10!} + \frac{12!}{1! * 11!} + \frac{12!}{0! * 12!} = 299$\\  c) at least three 1s?\\
+$2^{12} - (C(12,0) + C(12,1) + C(12,2)) = 4017$\\d) an equal number of 0s and 1s?\\
+$C(12,6) = \frac{12!}{6! * 6!} = 924$\\\\
+24. How many ways are there for 10 women and six men to stand in a line so that no two men stand next to each other? [Hint: First position the women and then consider possible positions for the men.]\\
+$P(10,10) * P(11,6) = 10! * \frac{11!}{5!} = 1,207,084,032,000$\\\\
+26. Thirteen people on a softball team show up for a game.\\\\
+a) How many ways are there to choose 10 players to take the field?\\
+$C(10,13) = \frac{13!}{10! * 3!} = 286$\\b) How many ways are there to assign the 10 positions by selecting players from the 13 people who show up?\\
+$P(13,10) = \frac{13!}{3!} = 1,037,836,800$\\c) Of the 13 people who show up, three are women. How many ways are there to choose 10 players to take the field if at least one of these players must be a woman?\\\\
+One women and 9 men can be chosen by $C(10,9) * C(3,1) = 30$.\\
+Two women and 8 men can be chosen by $C(10,8) * C(3,2) = 135$.\\
+Three women and 7 men can be chosen by $C(10,7) * C(3,3) = 120$\\
+$C(10,9) * C(3,1) + C(10,8) * C(3,2) + (10,7) * C(3,3) = 285$
+
+
+
+
+\end{document}  

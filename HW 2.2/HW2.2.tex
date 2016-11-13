@@ -1,0 +1,63 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 2.2}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\noindent\textbf{Section 1.7}\\\\
+\noindent 8. Prove the if $n$ is a perfect square, then $n + 2$ is not a perfect square.\\\\
+Let: p = $n$ is a perfect square;   q = $n + 2$ is not a perfect square.\\
+For a contradiction assume p and $\neg q$ are true. \\
+If $n + 2$ is a perfect square then:
+$n + 2 = k^2(k\geq 2)$\\
+$n = k^2 - 2$\\
+$(k - 1)^2 = k^2 - 2k + 1 < n < (k+1)^2 = k^2 + 2k + 1$\\
+Since $n\neq k^2$, n is not a perfect square. This proves that if n is a perfect square, then $n +2$ is not a perfect square by contradiction. \\\\
+22. Show that if you pick three socks from a drawer containing just blue socks and black socks, you must get either a pair of blue socks or a pair of black socks.\\\\
+Let p = pick three socks from a drawer containing just blue socks and black socks.\\
+q = you must get either a pair of blue socks or a pair of black socks.\\
+If we assume that p and $\neg q$ are true then we are saying ``That if you pick three socks from a drawer containing just blue and blacks socks, you will not get a pair of blue or black socks." With this statement that maximum amount of socks that we could draw would be two. This contradicts the fact that we are picking three socks. So, if r is the statement that three socks are chosen, then we have shown that $\neg p\to (r\wedge\neg r)$. This tells us that p is true and proves that if you pick three socks from a drawer containing just blue socks and black socks, you must get a pair of either color. \\\\
+24. Show that at least three of any 25 days chosen must fall in the same month of the year.\\\\
+Let p = at least three of any 25 days chosen must fall in the same month of the year.\\
+For a contradiction we will assume $\neg p$ is true. This means that at most 2 of any 25 days chosen must fall in the same month of the year. Since there are 12 months in a year this implies that at most 24 days could have been chosen because for each of the days of the month, at most only two of the chosen days could fall within the same month. This contradicts the fact that we are considering 25 days. So, if r is the statement that 25 days are chosen, then we have shown that $\neg p\to (r\wedge\neg r)$. This proves that p is true and we have proven that at least 3 of any 25 days chosen must fall within the same month. \\\\
+26. Prove that if n is a positive integer, then n is even if and only if 7n + 4 is even.\\\\
+Let: $p = n$ is even;  $q = 7n+4$\\
+In order to prove this statement both $p\to q$ and $q\to p$ must be true. \\\\
+$p\to q$:\\ 
+$n = 2k$\\
+$7n + 4 = 7(2k) + 4 = 2(7k + 2)\\$
+Based of the definition of an even integer we can conclude that $7n + 4$ is an even integer if n is an even integer. \\\\
+$q\to p$:\\
+Since we know that $7n + 4$ is an even integer we only need to prove that n is an even integer. \\
+$7n = 2k - 4 = 2(k - 2)$ which proves that 7n is an even integer. Based on the fact that 7 is a prime number it is safe to assume that n can be divided by 2, which makes it an even integer. \\\\
+Since we have proven that both $p\to q$ and $q\to p$ are true, we have shown that if n is a positive integer, then n is even if and only if 7n + 4 is even.\\\\
+30. Show that these statements are equivalent, where a and b are real numbers: (i) a is less than b, (ii) the average of a and b is greater than a, and (iii) the average of a and b is less than b.\\
+Showing proofs by contraposition for the following: $(i)\to (ii), (ii)\to (i), (i)\to (iii)$, and $(iii)\to (i).$\\
+For the first conditional statement we get that the average of a and b is small or equal to a ($\frac{a+b}{2}\leq a$). We can easily see that $b\leq a$. For the second conditional statement we get that a is greater than or equal to b. Modifying statement ii we can get $a + b \leq  a$, which satisfies the condition that the average of a and b is less than a. For the third conditional statement the average of a and b is greater than b ($\frac{a+b}{2}\geq b$). This clearly shows that $a\geq b$. For the final statement $a\geq b $ and $a + b\geq 2b$. This equals $\frac{a+b}{2}\geq b$. In conclusion, we have proven $(i)\to (ii), (ii)\to (i), (i)\to (iii)$, and $(iii)\to (i)$, so all three statements are equivalent.\\\\\\\\
+\textbf{Section 1.8}\\\\
+8. Prove that there is a positive integer that equals the sum of the positive integers not exceeding it. Is your proof constructive or nonconstructive?\\\\
+The simple solution for this problem is to take 1. The sum of positive integers up to 1 is 1 and does not exceed 1. This proof is constructive.\\\\
+30. Prove that there are no solutions in integers x and y to the equation $2x^2 + 5y^2 = 14$.\\\\
+We can reduce the number of solutions by realizing that $2x^2 > 14$ when $x\geq 3$ and $5y^2 > 14 $when $y\geq 2$. This leaves $x$ with a possible value of $-2, -1, 0, 1, 2$ and y with possible values of $-1, 0, 1$. Using an exhaustive proof we can see that the largest possible sum for $2x^2$ and $5y^2$ is only 13. This means that it is impossible for $2x^2 + 5y^2 = 14$.\\\\
+36. Prove that between every rational number and every irrational number there is an irrational number.\\\\
+Let: $r$ be a rational number and $x$ be an irrational number\\
+We can prove that $\frac{x + r}{2}$ is an irrational number by contradiction.\\
+So let: $\frac{x + r}{2}$ be a rational number\\
+$\frac{x + r}{2} = s/t$ and $r = p/q$, where s,t,p and q are integers and $t\neq 0$ and $q\neq 0$. \\
+$ x = 2(\frac{x + r}{2}) - r = \frac{2s}{t} -\frac{p}{q} =\frac{2sq - pt}{qt}\\$
+So by definition of rational numbers $x$ is rational, which is a contradiction to $x$ is irrational. This proves that $\frac{x + r}{2}$ is an irrational number and proves that between every rational number and every irrational number there is an irrational number.\\\\
+
+
+
+\end{document}  

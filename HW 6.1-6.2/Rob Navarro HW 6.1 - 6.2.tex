@@ -1,0 +1,51 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 6.1 - 6.2}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent
+Section 10.1\\
+24.\\
+a) Explain how graphs can be used to model electronic mail messages in a network. Should the edges be directed or undirected? Should multiple edges be allowed? Should loops be allowed?\\\\
+Let the vertices represent email addresses and directed edges from one vertex to another represent actual emails sent from one address to another. Multiple edges should be allowed since more than one email can be sent from one address to another. Finally, loops should be allowed since it is possible to send an email to yourself. \\\\
+28. Describe a graph model that represents a subway system in a large city. Should edges be directed or undirected? Should multiple edges be allowed? Should loops be allowed?\\\\
+For a graph of a subway system in a large city, the important places are the vertices and the edges represent the subway path between two places. The graph should be directed so that an edge starts at station a and ends at station b. Multiple edges are allowed since there may be more than one subway between two places. Finally, loops are not allowed since it is not practical for a subway to loop back to the same spot.\\\\
+Section 10.2\\
+6. Show that the sum, over the set of people at a party, of the number of people a person has shaken hands with, is even. Assume that no one shakes his or her own hand.\\\\
+The set of people can be represented by an undirected graph where the people are vertices and the edges represent two people shaking hands. We then know that that the number of hands a person has shaken is represented by the degree of that person. By the handshaking theorem the sum of two times the number of edges. Thus, the number of hands that a person shakes must be even.\\\\
+16. What do the in-degree and the out-degree of a vertex in the Web graph, as described in Example 5 of Section 10.1, represent?\\\\
+The web can be modeled by a directed graph where each website is represented by a vertex and an edge starts at webpage a and ends at web page b if there is a link on a that points to b. The in degree of a vertex a represents the number of web pages having links that point to a. The out-degree of vertex a is the number of links on a pointing out to other websites. \\\\
+18. Show that in a simple graph with at least two vertices there must be two vertices that have the same degree.\\\\
+Let G be a simple graph with V vertices. Since G is simple, the highest degree of a vertex is V - 1. The lowest degree of a vertex v is 0. By contradiction we can prove that the lowest degree can't be zero. If all vertices have different degrees, it is possible that a vertex v has degree zero and vertex u has degree V - 1. This is not possible since there must be an edge between v and u, which contradicts the fact that v has a degree of zero. So, the possible degrees of vertices in the graph are from 1 to V - 1. By the pigeonhole principle, there must be two vertices that have the same degree. \\\\
+26. For which values of n are these graphs bipartite?\\\\
+a) $K_n$\\
+$K_1$ and $K_2$  bipartite; $K_n$ for all $n\geq 3$ is not bipartite.\\\\
+b) $C_n$\\
+$C_n$ is bipartite for all $n = 2x + 2, x\geq 1$\\\\
+c) $W_n$\\
+$W_n$ is not bipartite for all $n\geq 3$\\\\
+Section 10.4\\
+12.Determine whether each of these graphs is strongly connected and if not, whether it is weakly connected.\\\\
+a) The graph is not strongly connected because there is not a path between a and b but, the graph is weakly connected because there is a path between every two vertices in the underlying undirected graph. \\\\
+b) The graph is strongly connected because there is a path between any two vertices of the graph.\\\\
+c) The graph is not strongly or weakly connected because there is not a path from a to be in the underlying undirected graph. \\\\
+18. Show that all vertices visited in a directed path connecting two vertices in the same strongly connected component of a directed graph are also in this strongly connected component.\\\\
+We have a result that if $G = (V, E)$ is a directed graph. Let $a_0, a_1, a_2,...,a_n$ be the directed path. Let us assume that $a_n$ and $a_0$ are in the same strong connected component, there is a directed path from $a_n$ to $a_0$. When we create this path we also create a circuit. We can then reach any vertex on the original path from any other vertex on the path by following this circuit. So, all vertices visited in a directed path made by connecting two vertices in the same strongly connected component of a directed graph are also in this strongly connected component. 
+
+
+
+
+\end{document}  

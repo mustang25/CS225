@@ -1,0 +1,45 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex	
+\def\lc{\left\lceil}   
+\def\rc{\right\rceil}									
+\usepackage{amssymb}
+
+\title{HW 6.2}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent
+4.  A bowl contains 10 red balls and 10 blue balls. A woman selects balls at random without looking at them.\\\\a) How many balls must she select to be sure of having at least three balls of the same color?\\
+In order to assure that at least three different balls of the same color are drawn she must select 5 balls. This is because 2 of each color could be drawn with only 4 drawings, and the 5th drawing assures that 3 of one color are drawn.\\\\b) How many balls must she select to be sure of having at least three blue balls?\\
+If by some chance the first ten drawings are all red balls it would require an additional 3 drawings. With this worst case in mind it would require 13 drawings to guarantee that 3 blue balls are drawn. \\\\
+6. Let d be a positive integer. Show that among any group of $d + 1$ (not necessarily consecutive) integers there are two with exactly the same remainder when they are divided by $d$.\\\\
+The number of objects = $d + 1$ and the number containers = d\\
+Then, $\lc\frac{N}{k}\rc = \lc\frac{d+1}{d}\rc = 2$\\\\
+14. \\
+a)Show that if seven integers are selected from the first 10 positive integers, there must be at least two pairs of these integers with the sum 11.\\
+If we consider the first ten positive integers and arrange them as 5 pigeon holes pairs as follows:
+$(1,10), (2,9), (3,8), (4,7), (5,6)$\\
+Consider that the first five sections are from the five different set, the the sixth and 7th selections are from any of the five sets. The sum of the selections is 11 in both cases.  So, by choosing 7 from the first ten positive integers, we get the sum of at least two pairs = 11. \\\\
+b) Is the conclusion in part (a) true if six integers are selected rather than seven?\\
+If only six integers are selected from the first ten positive integers we know that only one pair has the sum equal to 11. So the statement is false. \\\\
+32. Show that if there are 100,000,000 wage earners in the United States who earn less than 1,000,000 dollars (but at least a penny), then there are two who earned exactly the same amount of money, to the penny, last year. \\\\
+Since we are calculating the number of wages up to 1 million dollars per year we know that there are 99,999,999 possible wages. Using the Pigeonhole Principle: 
+$\lc\frac{100,000,000}{99,999,999}\rc = 2$ persons who earn the same amount of money.  \\\\
+36. A computer network consists of six computers. Each computer is directly connected to at least one of the other computers. Show that there are at least two computers in the network that are directly connected to the same number of other computers.\\\\
+In this case we have $N = 6; k = 5$ Using the Pigeonhole Principle: \\
+$\lc\frac{N}{k}\rc = \lc\frac{6}{4}\rc = 2$ computers are connected to the same number of other computers. 
+
+
+
+
+\end{document}  

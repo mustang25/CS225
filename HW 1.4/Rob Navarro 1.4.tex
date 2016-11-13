@@ -1,0 +1,97 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 1.4}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent 6.\\ 
+\indent a) $\exists xN(x)$ \\
+\indent There exists a student in my school that has visited North Dakota. \\\\
+\indent b) $\forall xN(x)$\\
+\indent All students in my school have visited North Dakota. \\\\
+\indent c) $\neg\exists xN(x)$ \\
+\indent No students in my school have visited North Dakota. \\\\
+\indent d) $\exists x\neg N(x)$ \\
+\indent There exists a student in my school that has not visited North Dakota. \\\\
+\indent e) $\neg\forall xN(x)$\\
+\indent Not all of the students in my school have visited North Dakota. \\\\
+\indent f) $\forall x \neg N(x)$\\
+\indent None of the students in my school have visited North Dakota. \\\\
+8. \\
+$R(x)$: x is a rabbit\\ $H(x)$: x hops\\\\
+\indent a) $\forall x(R(x) \to H(x))$\\
+\indent If the animal is a rabbit then it hops.\\\\
+\indent b) $\forall x(R(x) \wedge H(x))$\\
+\indent All animals are rabbits and they hop. \\\\
+\indent c) $\exists x(R(x) \to H(x))$\\
+\indent There exists an animal that if it is a rabbit then it hops. \\\\
+\indent d) $\exists x(R(x) \wedge H(x))$\\
+\indent There exists an animal that is a rabbit and it hops. \\\\
+10. \\
+$C(x)$: $x$ has a cat\\$D(x)$: $x$ has a dog\\$F(x)$: $x$ has a ferret\\\\
+\indent a) A student in your class has a cat, a dog, and a ferret.\\
+\indent $\exists x(C(x)\wedge D(x)\wedge F(x))$\\\\
+\indent b) All student in your class have a cat, a dog, or a ferret.\\
+\indent $\forall x ((C(x)\lor D(x)\lor F(x))$\\\\
+\indent c) Some student in your class has a cat and a ferret, but not a dog.\\
+\indent $\exists x(C(x)\wedge F(x)\wedge\neg D(x))$\\\\
+\indent d) No student in your class has a cat, a dog, and a ferret. \\
+\indent $\neg\forall x(C(x)\wedge D(x)\wedge F(x))$ (orignal answer)\\
+\indent $\neg\exists x(C(x)\wedge D(x)\wedge F(x))$ (corrected answer)\\\\
+\indent e) For each of the three animals, cats, dogs, and ferrets, there is a student in your\\
+\indent\hspace{3.1mm} class who has this animal as a pet. \\
+\indent $\exists x(C(x)\lor D(x)\lor F(x))$ (orignal answer)\\
+\indent $\exists xC(x)\wedge\exists xD(x)\wedge\exists xF(x)$ (corrected answer)\\\\
+12. \\
+$Q(x)$: $x + 1 > 2x$\\\\
+\indent a) $Q(0)$: True\\
+\indent b) $Q(-1)$: True\\
+\indent c) $Q(1)$: False\\
+\indent d) $\exists xQ(x)$: True\\
+\indent e) $\forall xQ(x)$: False\\
+\indent f) $\exists x\neg Q(x)$: True\\
+\indent g) $\forall x\neg Q(x)$: False\\\\
+16.\\
+\indent a) $\exists x(x^2 = 2)$: True\\
+\indent b) $\exists x(x^2 = -1)$: False\\
+\indent c) $\forall x(x^2 + 2\leq 1)$: True\\
+\indent d) $\forall x(x^2 \neq x)$: False\\\\
+24.\\
+\indent a) Everyone in your class has a cellular phone.\\
+\indent $S(x)$: x is in my class; C(x): x has a cellphone\\
+\indent 1. $\forall xC(x)$\\
+\indent 2. $\forall x(S(x)\to C(x))$\\\\
+\indent b) Somebody in your class has seen a foreign movie.\\
+\indent $S(x)$: x is in my class; $M(x)$: x has seen a foreign movie\\
+\indent 1. $\exists xM(x)$\\
+\indent 2. $\exists x(S(x)\wedge M(x))$\\\\
+\indent c) There is a person in your class who cannot swim.\\
+\indent $S(x)$: x is in my class; $C(x)$: x can swim\\
+\indent 1. $\exists x\neg C(x)$\\
+\indent 2. $\exists x(S(x)\wedge\neg C(x))$\\\\
+\indent d) All students in your class can solve quadratic equations.\\
+\indent $S(x)$: x is in my class; $Q(x)$: x can solve quadratic equations\\
+\indent 1. $\forall xQ(x)$\\
+\indent 2. $\forall x(S(x)\to Q(x)$\\\\
+\indent e) Some student in your class does not want to be rich.\\
+\indent $S(x)$: x is in my class; $R(x)$: x wants to be rich\\
+\indent 1. $\exists x\neg R(x)$\\
+\indent 2. $\exists x (S(x)\wedge\neg R(x))$\\
+
+
+
+
+
+\end{document}  

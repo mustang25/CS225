@@ -1,0 +1,31 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 6.3}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent
+Section 10.5\\
+10. Can someone cross all the bridges shown in this map exactly once and return to the starting point?\\
+Since the degree of each vertex of the graph is even, the graph has a Euler circuit. Therefore, someone can indeed cross all six bridges exactly once and return to the starting point. \\\\
+14. Since the picture is a graph in which there are only two vertices of degree we know it has a Euler path. This means that the picture can be drawn without lifting the pencil if the Euler path is followed. \\\\
+26. For which values of n do these graphs have an Euler circuit?\\\\
+a) $K_n$\\
+The degree of each vertex of $K_n$ is $n - 1$, for any $n\geq 1$. So, the degree of each vertex is even only when $n$ is odd. This means that $K_n$ has a Euler circuit for all $n\geq 3$ when n is odd. \\\\
+b) $C_n$\\
+$C_n$ has a vertex of two for all $n\geq 3$. So, there is a Euler circuit for all $n\geq 3$. \\\\
+c) $W_n$\\
+For all $W_n$ where $n\geq 3$ there are more than two vertices of odd degree. Therefore, $W_n$ has no Euler circuit for all $n\geq 3$. 
+\end{document}  

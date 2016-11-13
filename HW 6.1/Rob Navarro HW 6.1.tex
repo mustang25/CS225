@@ -1,0 +1,65 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 6.1}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent 
+8. How many different three-letter initials with none of the letters repeated can people have?\\\\
+We will have 26, 25, and 24 for options. By the product rule 26 * 25 * 24 = 15600. \\\\
+12. How many bit strings are there of length six or less, not counting the empty string?\\\\
+Since each bit string can be either 0 or 1 we can find the total by using product rule and sum rule:\\
+$2^1 + 2^2 + 2^3 + 2^4 + 2^5 + 2^6 = \frac{2^7 - 1}{1} = 127$\\\\
+16. How many strings are there of four lowercase letters that have the letter x in them?\\\\
+Let S be the number of possible strings with length less than or equal to 4. We get $S = 26^4$\\
+Let T be the number of possible strings without x and less than or equal to 4. We get $T = 25^4$\\
+To find the total number of string with x in them we can calculate $S - T = 26^4 - 25^4 = 66351$\\\\
+26. How many strings of four decimal digits\\\\
+The total number of possible four decimal digits has 10 options for each digit. With this in mind we can use the product rule: $10^4 = 10000$ strings. So 10000 is the amount of possible strings for length 4. \\\\
+a) do not contain the same digit twice?\\
+If we have no digit repeating the 2nd place will be occupied by a digit in 9 different ways. The 3rd and 4th place will also be represented by a digit in 8 and 7 ways respectively. Using the product rule we get:\\
+$10 * 9 * 8 * 7 = 5040$\\\\
+b) end with an even digit?\\
+The total number of possible digits is 10 and the number of even digits is 5\\
+Since the string ends with an even digit we can use the product rule:\\
+$10 * 10 * 10 * 5 = 5000$\\\\
+c) have exactly three digits that are 9\\
+With three positions being occupied by 9 the 4th position can be occupied with any number but 9. This means that the number can be defined 9 different ways 4 times. By the sum rule we get:\\
+$9 + 9+ 9 + 9 = 36$\\\\
+28. How many license plates can be made using either three digits followed by three uppercase English letters or three uppercase English letters followed by three digits?\\\\
+There are 26 options for the 3 letters and 10 choices for numbers. Using the product rule we get:\\
+$10 * 10 * 10 * 26 * 26 * 26 * 2 = 35152000$\\\\
+48. How many bit strings of length seven either begin with two 0s or end with three 1s?\\\\
+We can use the following equation: $|A\cup B| = |A| + |B| - |A - B|$ where:\\
+$|A| =$ number of strings of length 7 begins with two 0s = $2^5$\\
+$|B| =$ Number of strings end with three 1s = $2^4$\\
+$|A\cap B| =$ number of string both beginning with two0s and end with three 1s = $2^2$\\
+We then get $2^5 + 2^4 - 2^2 = 44$\\\\
+52. Every student in a discrete mathematics class is either a computer science or a mathematics major or is a joint major in these two subjects. How many students are in the class if there are 38 computer science majors (including joint majors), 23 mathematics majors (including joint majors), and 7 joint majors?\\\\
+Computer science major = C\\
+Mathematics major = M\\
+$n(C) = 38, n(M) = 23, n(C\cap M) = 7$\\
+$n(C\cup M) = n(C) + n(M) - n(C\cap M) = 38 + 23 - 7 = 54 $\\\\ 
+72. Use mathematical induction to prove the product rule for m tasks from the product rule for two tasks.\\\\
+Base case: m = 2; the first task can be done in $n_1$ and the second task can be done with $n_2$\\
+Then the product rule is just $n_1n_2$, which is the product rule for two tasks. \\
+Inductive case: Assume that $P(m)$ is true, we will prove that $P(m + 1)$ is also true.\\\ 
+In this case we will get $(n_1n_2...n_m)n_{m+1}$ This proves that by induction $P(m+1)$ is true.\\\\
+
+
+
+
+
+\end{document}  

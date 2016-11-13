@@ -1,0 +1,51 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{Assignment 1.7}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent 2. Use a direct proof to show that the sum of two even integers is even. \\
+Let: $n_1 = 2k$ and $n_2 = 2k$ where $k$ is an integer\\
+$n_1 + n_2 = 2k + 2k = 4k = 2(2k)$\\
+Using the definition of an even integer we can see that the some of two even integers is a even integer.\\\\
+4. Show that the additive inverse, or negative, of an even number is an even number using a direct proof.  \\
+Let: $n = 2k$ where $k$ is an integer\\
+The inverse of $n$ is: $-n = -(2k)$
+This shows that through the definition of an even integer, that the inverse of an even number is still an even number. \\\\
+6. Use a direct proof to show that the product of two odd numbers is odd.\\
+Let: $n_1 = 2k_1 + 1 $ and $n_2 = 2k_2 + 1$ where $k$ is an integer\\
+The product: $n_1 * n_2 = (2k_1+1) * (2k_2+1) = 4k_1k_2 + 2k_1 + 2k_2 + 1 $\\
+After simplifying we get: $2 * (2k_1k_2 + k_1 + k_2) + 1$, which shows that the product of 2 odd numbers is indeed an odd number by definition of an odd number. \\\\
+14. Prove that if $x$ is rational and $x\neq 0$, then $1/x$ is rational. \\
+Since x is rational we know, by the definition of a rational number that $x = p/q$ where $q\neq 0$. Since $x\neq 0$ it is safe to assume that $p\neq 0$, since this would cause $x=0$. Based on this information we can assume that $1/x$ is a rational number by definition of a rational number. \\\\
+16. Prove that if $m$ and $n$ are integers and $mn$ is even, then $m$ is even or $n$ is even. \\
+Let: \\
+$p$ = $m$ and $n$ are integers and $mn$ is even\\
+$q$ = $m$ is even or $n$ is even\\
+This gives us $p\to q$\\
+If we use the contrapositive for this implication we would change all of the evens in $p$ and $q$ to odds. We know that the contrapositive is true based on the work done in question 6. With this in mind we can conclude that the original implication is true since the contrapositive is true. \\\\
+18a. Prove that if $n$ is an integer and $3n + 2$ is even, then $n$ is even using a proof by contraposition.\\
+Let: \\
+$p$ =  $n$ is an integer and $3n + 2$ is even\\
+$q$ = $n$ is even \\
+This gives us $p\to q$\\
+Using the contrapositive we can show that $3n + 2$ is odd\\
+Using the definition of an odd number we know that $n = 2k +1$\\
+So: $3n + 2 = 3(2k + 1) + 2 = 6k + 5 = (6k + 4) + 1 = 2(3k + 2) + 1$\\
+Based on the definition of an odd number, $n = 2k +1$, we can assume that $3n + 2$ is indeed an odd integer. The solves the contrapositive and proves that if $n$ is an integer and $3n + 2$ is even, then $n$ is even 
+
+
+
+\end{document}  

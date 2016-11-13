@@ -1,0 +1,58 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{Quiz 5}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent
+1. \\
+a) Give a recursive definition of the sequence $a_n = 2n ,n = 2, 3, 4$? where , $a_1 = 2$\\\\
+Base Case: $(n = 2) a_2 = 2^2 = 4$\\
+Recursive Case: $a_{n+1} = 2^{n+1} = 2(2^n) = 2a_n $  \\\\
+b) Give a recursive definition of the sequence $a_n=n^2 - 3n , n = 0,1,2,?$\\\\
+Base Case: $a_0 = 0^2 - 3(0) = 0$\\
+Recursive Case: $ (n+1)^2 - 3(n+1) = n^2 + 2n + 1 - 3n - 3 = a_n + 2n - 2$\\\\
+2. Prove that $f_1^2 + f_2^2 + . . . + f_n^2  = f_nf_{n+1} $ when n is a positive integer, and $f_n$  is the nth Fibonacci number.\\\\
+$P(n) = f_1^2 + f_2^2 + . . . + f_n^2  = f_nf_{n+1} $\\
+Base Case: $P(1) = f_1^2 = 1*1 = 1$\\
+Recursive Case: $P(k + 1) = f_1^2 + f_2^2 + . . . + f_k^2 + f_{k+1}^2  = f_nf_{n+1}  + f_{k+1}^2 $\\
+= $f_k * f_{k+1} + f_{k+1} * f_{k+1} = f_{k+1}(f_k + f_{k+1}) = f_{k+1} * f_{k+2}$\\\\
+3. \\
+a) Give a recursive definition of the set of positive integers that are multiple of 4. \\\\
+Base Case: $4\in S$\\
+Recursive Case: If $x + y\in S$, then $x,y\in S$\\\\
+b) Give a recursive definition of the set S of strings over alphabet \{a, b\} which are odd length palindrome. (Hint- A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. For example - Ana, noon etc. Ana has odd length but noon has even)\\\\\\
+Base Case: $a\in S, b\in S$\\
+Recursive Case: If $x\in S$, then $axa\in S$ and $bxb\in S$
+4. \\
+a) Show that if seven integers are selected from the first 10 positive integers there must be at least two pairs of these integers with the sum 11.\\\\
+If we consider the first ten positive integers and arrange them as 5 pigeon holes pairs as follows:\\
+$\{1,10\}, \{2,9\}, \{3,8\}, \{4,7\}, \{5,6\}$\\
+Consider that the first five sections are from the five different set, the the sixth and 7th selections are from any of the five sets. The sum of the selections is 11 in both cases.  So, by choosing 7 from the first ten positive integers, we get the sum of at least two pairs = 11. \\\\
+b) How many strings are there of four lowercase letters that have the letter 'c' in them?\\\\
+Let S be the number of possible strings with length less than or equal to 4. We get $S = 26^4$\\
+Let T be the number of possible strings without c and less than or equal to 4. We get $T = 25^4$\\
+To find the total number of string with c in them we can calculate $S - T = 26^4 - 25^4 = 66351$\\\\
+5. Consider a wedding picture of 7 people? There are 12 people, including the bride and groom. \\\\
+a) How many possibilities are there if the bride must be in the picture?\\
+The bride can be in one of 7 positions and for the rest of the remaining positions we will have 11, 10, 9, 8, 7, 6 people to choose from, so:\\
+$ 7 * 11 * 10 * 9 * 8 * 7 * 6 = 2328480$ possibilites\\\\
+b) b) How many possibilities are there if the bride and groom must both be in the picture?\\\\
+The bride can take one of the 7 positions and the groom will occupy one of the remaining 6, which gives us a total of 42 possibilities. For the rest of the remaining positions we will have 10, 9, 8, 7, 6 people to choose from, so:\\
+$42 * 10 * 9 * 8 * 7 * 6 = 1270080$ possibilites\\
+
+
+
+\end{document}  

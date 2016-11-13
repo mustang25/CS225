@@ -1,0 +1,33 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 6.4}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent
+8, Find a shortest path (in mileage) between each of the following pairs of cities in the airline system shown in Figure 1.\\\\a) New York and Los Angeles\\
+Since there is a direct path from New York to Los Angeles we know that it is the shortest path. \\\\b) Boston and San Francisco\\
+Starting from Boston the next destination would be Chicago. There are 860 miles between Boston and Chicago and while New York is closer all paths out of New York would make the total greater than 860 miles. From Chicago we can take a direct path to San Francisco, which gives us a total of 2715 miles. \\\\c) Miami and Denver\\
+Starting in Miami, we have a choice of New York or Atlanta. Atlanta has a shorter path of only 595 miles so it is the choice. From Atlanta we have a choice between New York and Chicago. Chicago is the choice since it is not only closer to Denver but is also closer to Atlanta. From Chicago there is a direct path to Denver so that is the choice. \\\\d) Miami and Los Angeles\\
+From Miami the shortest path that presents itself is the same a part a to begin with. We end up in Denver via the same route (Atlanta to Chicago to Denver). From Denver there is a direct route to Los Angeles, which is the route we choose.\\\\
+14. Explain how to find a path with the least number of edges between two vertices in an undirected graph by considering it as a shortest path problem in a weighted graph.\\\\
+The shortest path between two vertices is a path with the least number of edges. We can consider a graph that has multiple vertices that each have a length of 1. We can then find the shortest route between two vertices by finding the path that has the least number of edges. \\\\
+18. Is a shortest path between two vertices in a weighted graph unique if the weights of edges are distinct. \\\\
+We can have a Graph G that has the vertices u, v, w, and x. We can then give the following weights to the edges in the graph. (u, v) = 3, (v, w) = 7, (u, x) = 4, and (x, w) = 6. We can see that there are multiple paths from u to w, each with different weights. We can then say that the shortest path between two vertices in a weighted graph is not unique if weights of edges are distinct. 
+
+
+
+
+\end{document}  

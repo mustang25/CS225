@@ -1,0 +1,100 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{Practice Quiz 1}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+\noindent 5. Consider the propositions:\\
+q: Juan is a computer science major.\\
+p: Juan is a math major.\\
+Use symbolic connectives to represent the proposition ``Juan is a math major but not a computer science major."\\
+Answer: $p\wedge\neg q$\\\\
+6. Write each of these propositions in the form ``p if and only if q" in
+English.\\\\
+a) For you to get an A in this course, it is necessary and sufficient
+that you learn how to solve discrete mathematics problems.\\
+Answer: You will get an A in the course if and only if you learn how to solve discrete mathematics problems.\\
+b) If you read the newspaper every day, you will be informed, and conversely.\\
+Answer: You will be informant and conversely if and only if you read the newspaper everyday.\\
+c) It rains if it is a weekend day, and it is a weekend day if it rains.\\
+Answer: It is a weekend day if and only if it is raining.\\
+d) You can see the wizard only if the wizard is not in, and the wizard is not in only if you can see him.\\
+Answer: You can see the wizard if and only if the wizard is not in. \\\\
+7. State the converse, contrapositive, and inverse of each of these implications.\\\\
+1) When I stay up late, it is necessary that I sleep until noon.\\
+Converse: When I sleep until noon, it is necessary that I stay up late.\\
+Contrapositive: When I don't sleep in until noon, it is necessary that I don't stay up late.\\
+Inverse: When I don't stay up late, it is necessary that I don't sleep until noon.\\\\
+2)  If it snows tonight, then I will stay at home.\\
+Converse: If I stay home, then it snowed tonight.\\
+Contrapositive:  If I don't stay home, then it did not snow tonight.\\
+Inverse: If it doesn't snow tonight, then I will not stay home.\\\\
+8. What is the negation of each of these propositions?\\\\
+
+i) To get tenure as a professor, it is sufficient to be world famous.\\
+\indent Answer: p = you are world famous\\
+\indent q = get tenure as a professor\\
+\indent $p\to q $
+\indent Negation: $\neg (p\to q) = p \wedge\neg q$\\
+\indent So the answer is, you are famous you and will not get tenure as a professor. \\
+
+ii) If I am lying, I am dying.\\
+\indent Answer p = I am lying  q = I am dying\\
+\indent $p\to q$
+\indent Negation: $\neg (p\to q) = p \wedge\neg q$\\
+\indent So the answer is, I am lying and not dying.\\
+
+iii) Tom's smartphone has at least 32GB of memory.\\
+\indent Answer: p = the smartphone has at least 32GB of memory
+\indent Negation: $\neg p$\\
+\indent So the answer is, Tom's smartphone does not have at least 32GB of memory. \\
+
+iv) If the home team does not win, then it is not raining.\\
+\indent Answer: p = the home team wins   q = it is raining\\
+\indent $\neg p\to\neg q = \neg(\neg p)\lor \neg q = p\lor\neg q$\\
+\indent Negation: $\neg (p\lor\neg q) = \neg p\wedge q$\\
+\indent So the answer is, The home team does not win and it's raining. \\\\
+
+9. Construct a truth table for the statement $(p\to q) \wedge (p\to r).$\\\\
+\indent \begin{tabular} {| l | c | c | c | c || r |}
+  \hline
+  p & q & r & $p \to q$ & $p\to r$ & $(p \to q)\wedge (p\to r)$ \\ \hline
+  T & T & T & T & T & T \\ \hline
+  F & T & T & T & T & T\\ \hline
+  T & F & T & F & T & F\\ \hline
+  T & T & F & T & F & F\\ \hline
+  F & F & T & T & T & T\\ \hline
+  F & T & F & T & T & T\\ \hline
+  T & F & F & F & F & F\\ \hline
+  F & F & F & T & T & T\\ \hline
+\end{tabular}\\\\
+
+\noindent10. Determine whether $[p\wedge (p\to q)]\to q$ is a tautology.\\\\
+$[p\wedge (p\to q)]\to q\\$
+$\equiv [p\wedge (\neg p\lor q)]\to q$ (Rule of Implication)\\
+$\equiv [(p\wedge\neg p)\lor (p\wedge q)]\to q$ (Distributive) \\
+$\equiv [F\lor (p\wedge q)]\to q$ (Negation)\\
+$\equiv (p\wedge q)\to q$ (Identity)\\
+$\equiv \neg(p\wedge q)\lor q$ (Rule of Implication)\\
+$\equiv (\neg p\lor \neg q)\lor q$ (De Morgans)\\
+$\equiv \neg p\lor (\neg q\lor q)$ (Associative)\\
+$\equiv \neg p\lor T$ (Negation)\\
+$\equiv T$ (Domination)
+
+
+
+
+
+\end{document}  

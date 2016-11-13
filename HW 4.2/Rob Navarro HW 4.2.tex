@@ -1,0 +1,45 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{HW 4.2}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\noindent
+2. Use strong induction to show that all dominoes fall in an infinite arrangement of dominoes if you know that the first three dominoes fall, and that when a domino falls, the domino three farther down in the arrangement also falls.\\\\
+$P(n)$: the dominoes at the $n, n + 1,$ and $n + 2$ position fall. \\
+Base Case: We know that $P(1)$ is true since we are told the first three dominoes fall.\\
+Inductive Case: We can assume that $P(1), P(2),$ and $P(3)$ are true based on what we are told. We are also told that the domino three farther down falls so if $P(1)$ is true we know that $P(4)$ is also true. To prove that $P(m + 1)$ is true we need to look back at $P(m - 2)$, so if $m > 3$ we know that $n - 2, n - 1,$ and $n$ position fall. It is then safe to say that n, n + 1, and n + 2 will all fall for all possible integer n in an infinite set of dominoes. We have proven $P(n)$ is true for all positive integers. \\\\
+Let P(n) be the statement that a postage of n cents can be formed using just 4-cent stamps and 7-cent stamps. The parts of the exercise outline a strong induction proof that P(n) is true for n ? 18.\\\\
+a) Show statements $P(18), P(19), P(20), P(21)$ are true, completing the basis step of the proof.\\
+$P(18)$: 2 7-cent stamps and 1 4-cent stamp.\\
+$P(19)$: 1 7-cent stamp and 3 4-cent stamps.\\
+$P(20)$: 5 4-cent stamps.\\
+$P(21)$: 3 7-cent stamps.\\b) What is the inductive hypothesis of the proof?\\
+$P(m)$: We can form any postage with 4-cent and 7-cent stamps when $m\geq 18$. \\c) What do you need to prove in the inductive step?\\
+If $P(m)$ is true then we need to show that P(m + 1) can be formed with just 4 and 7 cent stamps. d) Complete the inductive step for m ? 21.
+We already know that P(m - 3) is true based on the work done in step a. Based on this fact we know that P(m + 1) can be created by adding an additional 4-cent stamp to P(m - 3). Thus we have proven that P(m + 1) is true.  \\e) Explain why these steps show that this statement is true whenever n ? 18.\\
+We have proven both the base case and inductive case, so by strong induction we know that the statement is true for every integer n greater than or equal to 18. \\\\
+12. Use strong induction to show that every positive integer n can be written as a sum of distinct powers of two, that is, as a sum of a subset of the integers $2^0 = 1,2^1 = 2,2^2 = 4$, and so on.\\\\
+P(n): the positive integer n can be written as a sum of distinct powers of two. \\
+Base Case: $P(1): 1 = 2^0$ and $P(2): 2 = 2^1$\\
+Inductive Case: Assume that $P(j)$ whenever $j\leq k$\\\\
+Even: When $ k+ 1$ is even we also know that $\frac{k + 1}{2}$ is an integer, and that $\frac{k + 1}{2}\leq k$.  We know that $P(j)$ is true when $j\leq k$ and since $\frac{k + 1}{2}\leq k$ we can assume that $\frac{k + 1}{2}$ can be represented as a sum of distinct powers of two. So if k + 1 is an even number P(k + 1) is true.\\\\
+Odd: If k + 1 is odd then k must be even. The only power of 2 that is odd is $2^0$, and since k is even it can't have $2^0$ as part of the summation. We then know that $k + 1 = k + 2^0$, which is a sum of distinct powers of two. \\\\
+We have proven that P(k + 1) can be represented as a sum of distinct powers of two, which shows that the hypothesis was true. By strong induction P(n) is true for all positive integers $n\geq 3$. \\\\
+30. Find out the flaw with the following ``proof" that ``$a^n = 1$" for all nonnegative integers n, whenever a is nonzero real number.\\\\
+The flaw in this proof is that we can't assume that $a^1 = 1$. In the inductive proof steps, it involves $a^k$ and $a^{k - 1}$, which is incorrect. 
+
+
+
+\end{document}  

@@ -1,0 +1,52 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{Quiz 4}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\noindent
+1.Let $A = \{x | 2 < x <  5\}$, $B = \{x | 4\leq x\leq 7\}$ and $C = \{x | 2\leq x < 6\}$, where $x$ represents a real number. Determine the sets \\\\
+$A = \{3, 4\}, B = \{4, 5, 6, 7\}, C = \{2, 3, 4, 5\}$\\
+$(A - C)\cup A = \{3, 4\}$\\
+$(A\cap B) - C = \{\emptyset$\}\\
+$B\cap\overline{\rm C} = \{6, 7\}$\\\\
+2. For any sets A, B and C , prove that\\
+$ A-(B\cap C)\subseteq(A - B)\cup(A - C).$\\\\
+Assume: $x\in A - (B\cap C$)\\
+then: $x\in A\land (x\notin B\lor x\notin C)$\\
+then: $(x\in A\land x\notin B)\lor (x\in A\land x\notin C)$\\
+then: $(x\in A - B)\lor (x\in A - C)$\\
+then: $x\in (A - B)\cup (A - C)$\\\\
+Assume: $x\in (A - B)\cup (A - C)$\\
+then: $(x\in A - B)\lor (x\in A - C)$\\
+then: $(x\in A\land x\notin B)\lor (x\in A\land x\notin C)$\\
+then: $x\in A\land (x\notin B\lor x\notin C)$\\
+then: $x\in A - (B\cap C$)\\\\
+3. Let A and B are the sets . Use the laws from the following table to show that \\
+$\overline{\rm \overline{\rm A}\cup\overline{\rm B} - A} = A$\\
+$\overline{\rm \overline{\rm A}\cup\overline{\rm B} - A} $\\
+$\equiv (A\cap B) - \overline{\rm A}$\\
+$\equiv (A - \overline{\rm A})\cup (B - \overline{\rm A})$\\
+$\equiv A$
+When subtracting the compliment of A from A we are left with just A. When subtracting the compliment of A from B we are left with only elements that are in A. The union between these two differences will then give us A. \\\\
+4. 1. $a_0 = 1, a_1 = -1, a_2 = 8, a_3 = -27$\\
+\indent2.  $a_0 = 2, a_1 = 2, a_2 = 2, a_3 = 2$\\\\
+5. 1) $\sum\limits_{k=50}^{100} 4k^2 = 4*\sum\limits_{k=50}^{100} k^2 = 4 *\sum\limits_{k=1}^{100} k^2 - \sum\limits_{k=1}^{49} k^2 = 4*(\frac{100 * 101 * 201}{6} - \frac{49 * 50 * 99}{6})$\\
+2)$\sum\limits_{i=0}^9 (3^i - 2) = \sum\limits_{i=0}^9 3^i - \sum\limits_{i=0}^9 2 = \frac{3^{10} - 1}{2} - 18$\\
+3) $\sum\limits_{i=8}^{10} 6i + 3 = \sum\limits_{i=8}^{10} 6i + \sum\limits_{i=8}^{10} 3 = 6*(\frac{10*11}{2} - \frac{7*8}{2}) - 9$\\
+4)$\sum\limits_{i=0}^{10} \frac{1}{2} * -1^i = \frac{1}{2} (\frac{-1^{11} - 1}{-2})$\\
+
+
+
+\end{document}  

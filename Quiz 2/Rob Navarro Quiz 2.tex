@@ -1,0 +1,83 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+\title{Quiz 2}
+\author{Rob Navarro}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+\noindent
+1. Let the following predicates be given. The domain consists of all people. 
+
+
+F(x) = x is friendly
+
+H(x) = x is helpful 
+
+S(x) = x is a student\\
+
+
+Express each of the following English sentences in terms of F(x), H(x), S(x),\\
+\indent quantifiers, and logical connectives.\\
+
+i. All students are not friendly.
+
+$\forall _x(S(x)\to\neg F(x))$
+
+ii. There are some students who aren't helpful.
+
+$\exists _x(S(x)\to\neg H(x))$
+
+iii. No student is friendly but not helpful.
+
+$\neg\forall _x(F(x)\wedge\neg H(x))$
+
+iv. Every friendly and helpful person is a student. 
+
+$\forall _x((F(x)\wedge H(x))\to S(x))$\\\\
+
+\noindent
+2. Let B(x), S(x), and A(x) be the predicates \\\\
+B(x) : x is a good basketball player\\
+S(x) : x is a good soccer player\\
+A(x) : x is a good athlete\\\\
+Translate each of the following quantified logic expressions ( provided in the file)  into English considering the domain to consist of all people .\\\\
+i. $\forall _x (A(x)\to (S(x)\lor B(x)))$\\
+All good athletes are a good soccer player or basketball player. \\\\
+ii. $\neg\forall _x(B(x))$\\
+Not everyone is a good basketball player.\\ 
+iii. $\exists _x((S(x)\wedge\neg B(x))\lor\neg A(x)$\\
+There exists a person who is a good soccer player and not a good basketball player, or is not a good athlete. \\
+iv. $\exists _x\neg (S(x)\wedge\neg B(x))$\\
+There exists a person who is not, a good soccer player and not a good basketball player. \\\\
+3. Prove or disprove that $\forall _x(P(x)\to Q(x)) $ and $ \neg\exists _x\neg(\neg Q(x)\to\neg P(x))$ are logically equivalent.\\
+$\forall _x(P(x)\to Q(x)) $ \\
+$\equiv\neg (\neg\forall _x(P(x)\to Q(x)))$ (Double Negation)\\
+$\equiv\neg (\exists _x\neg(\neg P(x)\to Q(x)))$ (5th Logical Equivalence table 7)\\
+$\equiv\neg\exists _x\neg(\neg Q(x)\to\neg P(x))$ (2nd Logical Equivalence table 7)\\
+This proves that $\forall _x(P(x)\to Q(x)) $ and $ \neg\exists _x\neg(\neg Q(x)\to\neg P(x))$ are logically equivalent. \\\\
+8. Use a direct proof to show that the product of  two nonzero rational numbers is also rational.\\
+Let $x = \frac {p}{q}$ and $y = \frac {r}{s}$\\
+Where $p, q, r,$ and $s$ are all integers and $q$ and $s$ do not equal 0. \\
+$x * y = \frac {p}{q} * \frac{r}{s} = \frac{pr}{qs}$\\
+Since $p, q, r,$ and $s$ are all integers, $qs\neq 0$ the product is rational. \\\\
+9. Use a proof by contraposition to show that If $m^2 + n^2$  is an odd integer, then $m$ is odd or $n$ is odd.\\
+Let: p = If $m^2 + n^2$  is an odd integer; q = $m$ is odd or $n$ is odd.\\
+This gives us $p\to q$ and the contrapositive is $\neg q\to\neg p$\\
+This states that ``If neither $m$ is odd or $n$ is odd, then $m^2 + n^2$  is an even integer.\\
+Knowing the definition of an even integer we will let $m = 2k$ and $n = 2l$\\
+So, $m^2 + n^2 = (2k)^2 + (2l)^2 = 4k^2 + 4l^2 = 2(2k^2 + 2l^2)$\\
+Since $(2k^2 + 2l^2)$ is just some integer this satisfies our contrapositive. This also solves the original proposition that if $m^2 + n^2$  is an odd integer, then $m$ is odd or $n$ is odd.
+
+
+
+\end{document}  
